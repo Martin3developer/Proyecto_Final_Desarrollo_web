@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CVJob</title>
+	
+</head>
+<body>
+<style type="text/css">
+	
+	#CV{
+		position: absolute;
+		right: 0;
+		top: 0;
+		border: 1px solid black;
+		height: 100%;
+		width: 50%;
+		z-index: 10;
+	}
+</style>
+
+	<h1>Hola</h1>
+	<form>
+		<input type="text" name="textbox" id=textbox>
+	</form>
+
+	<div id="CV">Curriculum</div>
+
+	<script type="text/javascript" src="jquery.min.js"></script>
+	
+	<script type="text/javascript">
+
+		function escribir(){
+			var texto= $('#textbox').val();
+			
+			 document.getElementById("CV").innerHTML = texto;
+		}
+
+		window.onload = function () {
+   		 $('input').keyup(escribir);
+    
+};
+	</script>
+
+</body>
+</html>
